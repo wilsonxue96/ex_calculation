@@ -96,15 +96,18 @@ module multiplier(
   
   //sel_input_data可以来自输入也可以来自data_sub
   //assign sel_input_data = (state_cnt == 3'd0) ? X : data_sub; 
-  always@(*)begin
-    if(state_cnt == 3'd0 & ~current_state[3]) begin
-      sel_input_data = X;
+  always@(posedge clk)begin
+    if(!rst_n) begin
+      sel_input_data <= 26'd0;
+    end
+    else if(state_cnt == 3'd0 & ~current_state[3]) begin
+      sel_input_data <= X;
     end
     else if(current_state == out) begin
-      sel_input_data = data_sub;
+      sel_input_data <= data_sub;
     end
     else begin
-      sel_input_data = sel_input_data;
+      sel_input_data <= sel_input_data;
     end
   end
 
