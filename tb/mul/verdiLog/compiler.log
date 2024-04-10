@@ -1,0 +1,15 @@
+*design* DebussyLib (btIdent Verdi_O-2018.09-SP2)
+Command arguments:
+    +define+verilog
+    -f ./file.f
+        fra_sel.v
+        int_sel.v
+        mul_gen.v
+        selection.v
+        multiplier.v
+        tb_mul.v
+
+Highest level modules:
+tb_mul
+
+Total	0 error(s),   0 warning(s)

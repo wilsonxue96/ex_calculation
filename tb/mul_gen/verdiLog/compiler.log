@@ -1,0 +1,20 @@
+*design* DebussyLib (btIdent Verdi_O-2018.09-SP2)
+Command arguments:
+    +define+verilog
+    -f ./file.f
+        fra_sel.v
+        int_sel.v
+        selection.v
+        mul_gen.v
+        tb_mul_gen.v
+
+Highest level modules:
+tb_mul_gen
+
+
+*Error* illegal output port on instance 'U_SELECTION_0' port 'i'
+"tb_mul_gen.v", 59: 
+
+*Error* illegal output port on instance 'U_SELECTION_0' port 'int_or_fra'
+"tb_mul_gen.v", 60: 
+Total	2 error(s),   0 warning(s)

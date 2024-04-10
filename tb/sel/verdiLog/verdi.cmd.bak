@@ -1,0 +1,101 @@
+debImport "-f" "./file.f"
+debLoadSimResult /home/wilson/code/ex_calculation/tb/sel/a.fsdb
+wvCreateWindow
+srcHBSelect "tb_selection.U_SELECTION_0" -win $_nTrace1
+srcHBAddObjectToWave -clipboard
+wvDrop -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollUp -win $_nWave2 1
+wvSelectSignal -win $_nWave2 {( "U_SELECTION_0" 4 )} 
+wvSelectSignal -win $_nWave2 {( "U_SELECTION_0" 4 5 )} 
+wvSelectSignal -win $_nWave2 {( "U_SELECTION_0" 3 )} 
+wvSelectSignal -win $_nWave2 {( "U_SELECTION_0" 3 )} 
+wvSetPosition -win $_nWave2 {("U_SELECTION_0" 3)}
+wvExpandBus -win $_nWave2 {("U_SELECTION_0" 3)}
+wvSetPosition -win $_nWave2 {("U_SELECTION_0" 20)}
+wvScrollUp -win $_nWave2 7
+wvSelectSignal -win $_nWave2 {( "U_SELECTION_0" 4 )} 
+wvSelectSignal -win $_nWave2 {( "U_SELECTION_0" 4 7 )} 
+wvSelectSignal -win $_nWave2 {( "U_SELECTION_0" 4 5 7 )} 
+wvSelectSignal -win $_nWave2 {( "U_SELECTION_0" 4 5 6 7 )} 
+wvCreateBusOpen -win $_nWave2
+wvSetPosition -win $_nWave2 {("U_SELECTION_0" 20)}
+wvSetPosition -win $_nWave2 {("U_SELECTION_0" 20)}
+wvSetPosition -win $_nWave2 {("U_SELECTION_0" 21)}
+wvSetPosition -win $_nWave2 {("U_SELECTION_0" 20)}
+wvSetPosition -win $_nWave2 {("U_SELECTION_0" 20)}
+wvCreateBus -win $_nWave2 "int\[3:0\]" "/tb_selection/U_SELECTION_0/data\[14\]" \
+           "/tb_selection/U_SELECTION_0/data\[13\]" \
+           "/tb_selection/U_SELECTION_0/data\[12\]" \
+           "/tb_selection/U_SELECTION_0/data\[11\]"
+wvSetPosition -win $_nWave2 {("U_SELECTION_0" 21)}
+wvSetPosition -win $_nWave2 {("U_SELECTION_0" 21)}
+wvScrollDown -win $_nWave2 2
+wvSelectSignal -win $_nWave2 {( "U_SELECTION_0" 8 )} 
+wvScrollDown -win $_nWave2 8
+wvSelectSignal -win $_nWave2 {( "U_SELECTION_0" 8 9 10 11 12 13 14 15 16 17 18 \
+           )} 
+wvCreateBusOpen -win $_nWave2
+wvSetPosition -win $_nWave2 {("U_SELECTION_0" 21)}
+wvSetPosition -win $_nWave2 {("U_SELECTION_0" 21)}
+wvSetPosition -win $_nWave2 {("U_SELECTION_0" 22)}
+wvSetPosition -win $_nWave2 {("U_SELECTION_0" 21)}
+wvSetPosition -win $_nWave2 {("U_SELECTION_0" 21)}
+wvCreateBus -win $_nWave2 "frame\[10:0\]" \
+           "/tb_selection/U_SELECTION_0/data\[10\]" \
+           "/tb_selection/U_SELECTION_0/data\[9\]" \
+           "/tb_selection/U_SELECTION_0/data\[8\]" \
+           "/tb_selection/U_SELECTION_0/data\[7\]" \
+           "/tb_selection/U_SELECTION_0/data\[6\]" \
+           "/tb_selection/U_SELECTION_0/data\[5\]" \
+           "/tb_selection/U_SELECTION_0/data\[4\]" \
+           "/tb_selection/U_SELECTION_0/data\[3\]" \
+           "/tb_selection/U_SELECTION_0/data\[2\]" \
+           "/tb_selection/U_SELECTION_0/data\[1\]" \
+           "/tb_selection/U_SELECTION_0/data\[0\]"
+wvSetPosition -win $_nWave2 {("U_SELECTION_0" 22)}
+wvSetPosition -win $_nWave2 {("U_SELECTION_0" 22)}
+wvScrollUp -win $_nWave2 10
+wvSelectSignal -win $_nWave2 {( "U_SELECTION_0" 3 )} 
+wvSetPosition -win $_nWave2 {("U_SELECTION_0" 3)}
+wvCollapseBus -win $_nWave2 {("U_SELECTION_0" 3)}
+wvSetPosition -win $_nWave2 {("U_SELECTION_0" 3)}
+wvSetPosition -win $_nWave2 {("U_SELECTION_0" 7)}
+wvSelectSignal -win $_nWave2 {( "U_SELECTION_0" 6 )} 
+wvSelectSignal -win $_nWave2 {( "U_SELECTION_0" 6 )} 
+wvSelectSignal -win $_nWave2 {( "U_SELECTION_0" 5 )} 
+wvSelectSignal -win $_nWave2 {( "U_SELECTION_0" 6 )} 
+wvSetCursor -win $_nWave2 105.522388 -snap {("U_SELECTION_0" 1)}
+wvZoomIn -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "U_SELECTION_0" 4 )} 
+wvSetPosition -win $_nWave2 {("U_SELECTION_0" 4)}
+wvSetPosition -win $_nWave2 {("U_SELECTION_0" 5)}
+wvSetPosition -win $_nWave2 {("U_SELECTION_0" 6)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("U_SELECTION_0" 6)}
+wvSelectSignal -win $_nWave2 {( "U_SELECTION_0" 5 )} 
+wvSelectSignal -win $_nWave2 {( "U_SELECTION_0" 5 6 )} 
+wvSelectSignal -win $_nWave2 {( "U_SELECTION_0" 5 6 )} 
+wvSetRadix -win $_nWave2 -format UDec
+wvSetCursor -win $_nWave2 51.756219 -snap {("U_SELECTION_0" 1)}
+wvSetCursor -win $_nWave2 38.691542 -snap {("U_SELECTION_0" 6)}
+wvSetCursor -win $_nWave2 50.751244 -snap {("U_SELECTION_0" 6)}
+wvSetCursor -win $_nWave2 28.139303 -snap {("U_SELECTION_0" 1)}
+wvSetCursor -win $_nWave2 36.681592 -snap {("U_SELECTION_0" 6)}
+wvSetCursor -win $_nWave2 35.174129 -snap {("U_SELECTION_0" 1)}
+wvSetCursor -win $_nWave2 29.646766 -snap {("U_SELECTION_0" 1)}
+wvSetCursor -win $_nWave2 52.258706 -snap {("U_SELECTION_0" 1)}
+wvSetCursor -win $_nWave2 110.547264 -snap {("U_SELECTION_0" 1)}
+wvSetCursor -win $_nWave2 89.945274 -snap {("U_SELECTION_0" 1)}
+wvSetCursor -win $_nWave2 130.144279 -snap {("U_SELECTION_0" 1)}
+wvSetCursor -win $_nWave2 510.024876 -snap {("U_SELECTION_0" 1)}
+wvSetCursor -win $_nWave2 709.512438 -snap {("U_SELECTION_0" 1)}
+wvSetCursor -win $_nWave2 752.231362 -snap {("U_SELECTION_0" 1)}
+wvSetCursor -win $_nWave2 810.519919 -snap {("U_SELECTION_0" 1)}
+debExit

@@ -1,0 +1,80 @@
+debImport "-f" "./file.f"
+debLoadSimResult /home/wilson/code/ex_calculation/tb/mul_gen/a.fsdb
+wvCreateWindow
+srcHBSelect "tb_mul_gen.U_MUL_GEN_0" -win $_nTrace1
+srcHBAddObjectToWave -clipboard
+wvDrop -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomIn -win $_nWave2
+wvSetCursor -win $_nWave2 50.003470 -snap {("U_MUL_GEN_0" 1)}
+wvSetCursor -win $_nWave2 67.060729 -snap {("U_MUL_GEN_0" 5)}
+wvSetCursor -win $_nWave2 34.114517 -snap {("U_MUL_GEN_0" 2)}
+wvSetCursor -win $_nWave2 43.227299 -snap {("U_MUL_GEN_0" 4)}
+wvSetCursor -win $_nWave2 69.864662 -snap {("U_MUL_GEN_0" 1)}
+srcHBSelect "tb_mul_gen.U_MUL_GEN_0" -win $_nTrace1
+srcHBSelect "tb_mul_gen.U_MUL_GEN_0" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_mul_gen.U_MUL_GEN_0" -delim "."
+srcHBSelect "tb_mul_gen.U_MUL_GEN_0" -win $_nTrace1
+wvSetCursor -win $_nWave2 79.678427 -snap {("U_MUL_GEN_0" 1)}
+wvSetCursor -win $_nWave2 98.604974 -snap {("U_MUL_GEN_0" 1)}
+wvSetCursor -win $_nWave2 139.495662 -snap {("U_MUL_GEN_0" 1)}
+wvSetCursor -win $_nWave2 160.057837 -snap {("U_MUL_GEN_0" 1)}
+wvSetCursor -win $_nWave2 181.087334 -snap {("U_MUL_GEN_0" 1)}
+wvSetCursor -win $_nWave2 181.554656 -snap {("U_MUL_GEN_0" 1)}
+wvSetCursor -win $_nWave2 185.760555
+wvSetCursor -win $_nWave2 175.245807
+wvSetCursor -win $_nWave2 180.152689
+wvSetCursor -win $_nWave2 185.760555
+wvSetCursor -win $_nWave2 183.657606
+wvSetCursor -win $_nWave2 185.293233
+wvSetCursor -win $_nWave2 183.891267
+wvSetCursor -win $_nWave2 182.489300
+wvSetCursor -win $_nWave2 187.162522
+wvSetCursor -win $_nWave2 182.956622
+wvSetCursor -win $_nWave2 185.760555
+wvSetCursor -win $_nWave2 185.994216
+wvSetCursor -win $_nWave2 186.461538
+wvSetCursor -win $_nWave2 183.423944
+wvSetCursor -win $_nWave2 186.928861
+wvSetCursor -win $_nWave2 182.722961
+wvSetCursor -win $_nWave2 187.396183
+wvSetCursor -win $_nWave2 182.255639
+wvSetCursor -win $_nWave2 186.695200
+wvSetCursor -win $_nWave2 182.489300
+wvSetCursor -win $_nWave2 186.928861
+wvSetCursor -win $_nWave2 183.190283
+wvSetCursor -win $_nWave2 186.928861
+wvSetCursor -win $_nWave2 186.928861
+wvSetCursor -win $_nWave2 182.722961
+wvSetCursor -win $_nWave2 186.695200
+srcHBSelect "tb_mul_gen" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_mul_gen" -delim "."
+srcHBSelect "tb_mul_gen" -win $_nTrace1
+srcHBSelect "tb_mul_gen.U_SELECTION_0" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_mul_gen.U_SELECTION_0" -delim "."
+srcHBSelect "tb_mul_gen.U_SELECTION_0" -win $_nTrace1
+srcHBSelect "tb_mul_gen.U_SELECTION_0" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_mul_gen.U_SELECTION_0" -delim "."
+srcHBSelect "tb_mul_gen.U_SELECTION_0" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcHBSelect "tb_mul_gen" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_mul_gen" -delim "."
+srcHBSelect "tb_mul_gen" -win $_nTrace1
+wvSetCursor -win $_nWave2 50.237131 -snap {("U_MUL_GEN_0" 1)}
+wvSetCursor -win $_nWave2 69.864662 -snap {("U_MUL_GEN_0" 1)}
+wvSetCursor -win $_nWave2 51.405437 -snap {("U_MUL_GEN_0" 1)}
+wvSetCursor -win $_nWave2 70.565645 -snap {("U_MUL_GEN_0" 1)}
+wvSetCursor -win $_nWave2 76.407172 -snap {("U_MUL_GEN_0" 6)}
+wvSetCursor -win $_nWave2 49.536148 -snap {("U_MUL_GEN_0" 1)}
+wvSetCursor -win $_nWave2 69.631001 -snap {("U_MUL_GEN_0" 1)}
+debExit

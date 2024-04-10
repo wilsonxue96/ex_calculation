@@ -1,0 +1,104 @@
+0 
+30
++define+FSDB
++v2k
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/home/synopsys/vcs-mx/O-2018.09-SP2/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -rdynamic
+-Mobjects= /home/synopsys/vcs-mx/O-2018.09-SP2/linux64/lib/libvirsim.so /home/synopsys/vcs-mx/O-2018.09-SP2/linux64/lib/liberrorinf.so /home/synopsys/vcs-mx/O-2018.09-SP2/linux64/lib/libsnpsmalloc.so /home/synopsys/vcs-mx/O-2018.09-SP2/linux64/lib/libvfs.so
+-Mout=simv
+-Msaverestoreobj=/home/synopsys/vcs-mx/O-2018.09-SP2/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=/home/synopsys/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/pli.a -ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/home/synopsys/vcs-mx/O-2018.09-SP2/include
+-P
+-Xvcs_run_simv=1
+-f file.f
+-fsdb
+-full64
+-gen_obj
+-l
+-picarchive
+-sverilog
+/home/synopsys/vcs-mx/O-2018.09-SP2/linux64/bin/vcs1
+/home/synopsys/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/verdi.tab
+run.log
+56
+sysc_uni_pwd=/home/wilson/code/ex_calculation/tb/sel
+param=24
+XRDP_SOCKET_PATH=/run/xrdp
+XRDP_SESSION=1
+XRDP_PULSE_SOURCE_SOCKET=xrdp_chansrv_audio_in_socket_10
+XRDP_PULSE_SINK_SOCKET=xrdp_chansrv_audio_out_socket_10
+XMODIFIERS=@im=none
+XDG_SESSION_ID=c5
+XDG_RUNTIME_DIR=/run/user/1000
+XDG_MENU_PREFIX=gnome-
+XDG_DATA_DIRS=/home/wilson/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+XDG_CURRENT_DESKTOP=GNOME
+VTE_VERSION=5202
+VMR_MODE_FLAG=64
+VERDI_HOME=/home/synopsys/verdi/Verdi_O-2018.09-SP2
+VCS_MX_HOME_INTERNAL=1
+VCS_MX_HOME=/home/synopsys/vcs-mx/O-2018.09-SP2
+VCS_MODE_FLAG=64
+VCS_LOG_FILE=run.log
+VCS_HOME=/home/synopsys/vcs-mx/O-2018.09-SP2
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH_OVERRIDE=linux
+VCS_ARCH=linux64
+UNAME=/bin/uname
+TOOL_HOME=/home/synopsys/vcs-mx/O-2018.09-SP2/linux64
+SSH_AUTH_SOCK=/tmp/ssh-BvtXthA2Q7YC/agent.4256
+SSH_AGENT_PID=4495
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/4256,unix/unix:/tmp/.ICE-unix/4256
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+SCL_HOME=/home/synopsys/scl/2018.06
+QT_IM_MODULE=xim
+QT_GRAPHICSSYSTEM_CHECKED=1
+QTLIB=/usr/lib/qt-3.3/lib
+QTINC=/usr/lib/qt-3.3/include
+QTDIR=/usr/lib/qt-3.3
+PULSE_SCRIPT=/etc/xrdp/pulse/default.pa
+OVA_UUM=0
+MFLAGS=
+MAKELEVEL=1
+MAKEFLAGS=
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_ALL=C
+IMSETTINGS_MODULE=none
+IMSETTINGS_INTEGRATE_DESKTOP=yes
+HISTCONTROL=ignoredups
+GTK_IM_MODULE=gtk-im-context-simple
+GNOME_TERMINAL_SERVICE=:1.93
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/741bb6e0_b6c6_43f3_9d69_1adb8a8dd236
+GNOME_SHELL_SESSION_MODE=classic
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+DVE_HOME=/home/synopsys/vcs-mx/O-2018.09-SP2
+DC_HOME=/home/synopsys/syn/O-2018.06-SP1
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-B1v0EP31CZ,guid=c587ad624f3d50a37f57745065e16697
+COLORTERM=truecolor
+0
+6
+1712562762 tb_selection.v
+1712556197 selection.v
+1712556215 int_sel.v
+1712556207 fra_sel.v
+1712556300 file.f
+1550753332 /home/synopsys/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/verdi.tab
+4
+1551422344 /home/synopsys/vcs-mx/O-2018.09-SP2/linux64/lib/libvirsim.so
+1551421792 /home/synopsys/vcs-mx/O-2018.09-SP2/linux64/lib/liberrorinf.so
+1551421768 /home/synopsys/vcs-mx/O-2018.09-SP2/linux64/lib/libsnpsmalloc.so
+1551421789 /home/synopsys/vcs-mx/O-2018.09-SP2/linux64/lib/libvfs.so
+1712562768 simv.daidir
+-1 partitionlib

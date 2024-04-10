@@ -1,0 +1,9 @@
+Command Line: /home/synopsys/verdi/Verdi_O-2018.09-SP2/platform/LINUXAMD64/bin/Novas -f ./file.f -ssf a.fsdb
+uname(Linux localhost.localdomain 3.10.0-957.el7.x86_64 #1 SMP Thu Nov 8 23:39:32 UTC 2018 x86_64)
+type= DS_SCOPE element= 1 field= 1
+VERILOG tb_mul_gen
+VERILOG U_MUL_GEN_0
+-----
+second field= DebussyLib
+third field= mul_gen
+au time 56.195336 1.843066 0.843189 delta 324784128 324784128 total 749871104 749871104

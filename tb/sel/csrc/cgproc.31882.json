@@ -1,0 +1,190 @@
+{
+    "stat": {
+        "ru_self_end": {
+            "ru_utime_sec": 0.049140000000000003,
+            "ru_stime_sec": 0.025115999999999999,
+            "ru_maxrss_kb": 82668,
+            "ru_nivcsw": 6,
+            "ru_majflt": 0,
+            "ru_minflt": 28533,
+            "ru_nvcsw": 29
+        },
+        "cpu_cycles_end": 5067590136095659,
+        "ru_childs_end": {
+            "ru_utime_sec": 0.0088360000000000001,
+            "ru_stime_sec": 0.016114,
+            "ru_maxrss_kb": 22540,
+            "ru_nivcsw": 24,
+            "ru_majflt": 0,
+            "ru_minflt": 11210,
+            "ru_nvcsw": 26
+        },
+        "peak_mem_kb": 288420
+    },
+    "Modules": {
+        "...MASTER...": {
+            "start_perf": [
+                0.16402316093444824,
+                0.034681999999999998,
+                0.022764,
+                275500,
+                288420,
+                1712562767.6279631,
+                5067590072709000
+            ],
+            "child_modules": {
+                "std": 1,
+                "tb_selection": 1
+            },
+            "nRouts": 5,
+            "nMops": 0,
+            "end_perf": [
+                0.16657519340515137,
+                0.035012000000000001,
+                0.023717999999999999,
+                276972,
+                288420,
+                5067590081643975,
+                0,
+                0
+            ],
+            "nQuads": 0
+        },
+        "std": {
+            "start_perf": [
+                0.16660904884338379,
+                0.035033000000000002,
+                0.023732,
+                276972,
+                288420,
+                1712562767.630549,
+                5067590081741901
+            ],
+            "Compiled Times": 3,
+            "child_modules": {},
+            "nQuads": 218,
+            "Compiled": "Yes",
+            "svclass": [
+                "$vcs_nba_dyn_obj",
+                0,
+                37,
+                2,
+                2,
+                0,
+                "sigprop$$",
+                0,
+                37,
+                2,
+                2,
+                0,
+                "process",
+                0,
+                184,
+                8,
+                8,
+                0,
+                "event",
+                0,
+                36,
+                2,
+                2,
+                0,
+                "mailbox",
+                0,
+                107,
+                9,
+                9,
+                0,
+                "semaphore",
+                0,
+                71,
+                5,
+                5,
+                0
+            ],
+            "end_perf": [
+                0.16816115379333496,
+                0.036584999999999999,
+                0.023732,
+                276984,
+                288420,
+                5067590087185966,
+                8589934594,
+                0
+            ],
+            "nMops": 472,
+            "nRouts": 33
+        },
+        "tb_selection": {
+            "start_perf": [
+                0.16818118095397949,
+                0.036604999999999999,
+                0.023732,
+                276984,
+                288420,
+                1712562767.6321211,
+                5067590087234532
+            ],
+            "Compiled Times": 3,
+            "significant_routs": [
+                [
+                    17,
+                    "R_VCSgd_dR859_11",
+                    3136557,
+                    2712,
+                    728
+                ]
+            ],
+            "child_modules": {},
+            "nQuads": 642,
+            "Compiled": "Yes",
+            "end_perf": [
+                0.17972016334533691,
+                0.047506,
+                0.024305,
+                282980,
+                288420,
+                5067590127598365,
+                25769803777,
+                0
+            ],
+            "nMops": 1511,
+            "nRouts": 29
+        }
+    },
+    "CompUnits": {
+        "dR859_d": {
+            "mod": "tb_selection",
+            "out": "dR859_d.o",
+            "bytes": 19350,
+            "text": 7268,
+            "mode": 4,
+            "archive": "archive.2/_31882_archive_1.a",
+            "checksum": 0
+        }
+    },
+    "reusePaths": {
+        "amcQw_d": {
+            "icPath": "csrc"
+        },
+        "reYIK_d": {
+            "icPath": "csrc"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.2/_31882_archive_1.a",
+            "objects": [
+                [
+                    "dR859_d.o",
+                    19350
+                ],
+                [
+                    "amcQwB.o",
+                    105916
+                ]
+            ],
+            "size": 125266
+        }
+    ]
+}
