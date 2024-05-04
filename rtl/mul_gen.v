@@ -1,3 +1,5 @@
+
+`timescale 1ns/1ps
 module mul_gen (
   input clk,
   input rst_n,
@@ -6,7 +8,10 @@ module mul_gen (
   input int_or_fra,
 
   output reg [25:0] data_mul, //15 int   11 fra
-  output reg [14:0] data_sub
+  output reg [14:0] data_sub,
+
+  output reg [0:0] int_or_fra_buf,
+  output reg [4:0] i_buf
 );
 
   wire [25:0] mul;
@@ -145,12 +150,16 @@ module mul_gen (
 
   always@(posedge clk) begin
     if (!rst_n) begin
-      data_mul <= 26'd0;
-      data_sub <= 15'd0;
+      data_mul       <= 26'd0;
+      data_sub       <= 15'd0;
+      i_buf          <= 5'd0;
+      int_or_fra_buf <= 1'd0;
     end
     else begin
-      data_mul <= mul;
-      data_sub <= data - sub;
+      data_mul       <= mul;
+      data_sub       <= data - sub;
+      i_buf          <= i;
+      int_or_fra_buf <= int_or_fra;
     end
   end
 endmodule

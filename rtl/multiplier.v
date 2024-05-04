@@ -1,3 +1,5 @@
+
+`timescale 1ns/1ps
 module multiplier(
   input  wire [0:0]  clk,
   input  wire [0:0]  rst_n,
@@ -6,12 +8,12 @@ module multiplier(
   input  wire [0:0]  I_valid,      //输入有效，单周期脉冲
 
   output reg  [0:0]  mul_valid,    //输出乘数有效
-  output reg  [25:0] multiplier_0, //6个输出乘数，15位整数，11位小数
-  output reg  [25:0] multiplier_1,
-  output reg  [25:0] multiplier_2,
-  output reg  [25:0] multiplier_3,
-  output reg  [25:0] multiplier_4,
-  output reg  [25:0] multiplier_5
+  output reg  [5:0] multiplier_0, //6个输出乘数，15位整数，11位小数
+  output reg  [5:0] multiplier_1,
+  output reg  [5:0] multiplier_2,
+  output reg  [5:0] multiplier_3,
+  output reg  [5:0] multiplier_4,
+  output reg  [5:0] multiplier_5
 );
 
   //信号定义
@@ -22,6 +24,9 @@ module multiplier(
   wire [25:0] data_mul; //计算出的乘数
   wire [4:0] i;
   wire [0:0] int_or_fra;
+
+  wire [4:0] i_buf;
+  wire [0:0] int_or_fra_buf;
 
   //状态机状态定义
   parameter IDLE      = 4'b0001;
@@ -96,64 +101,67 @@ module multiplier(
   
   //sel_input_data可以来自输入也可以来自data_sub
   //assign sel_input_data = (state_cnt == 3'd0) ? X : data_sub; 
-  always@(posedge clk)begin
-    if(!rst_n) begin
-      sel_input_data <= 26'd0;
-    end
-    else if(state_cnt == 3'd0 & ~current_state[3]) begin
-      sel_input_data <= X;
+  always@(*)begin
+    if(state_cnt == 3'd0 & ~current_state[3]) begin
+      sel_input_data = X;
     end
     else if(current_state == out) begin
-      sel_input_data <= data_sub;
+      sel_input_data = data_sub;
     end
     else begin
-      sel_input_data <= sel_input_data;
+      sel_input_data = sel_input_data;
     end
   end
 
   //multiplier_0 2 multiplier_5
   always@(posedge clk) begin
     if(!rst_n) begin
-      multiplier_0 <= 26'd0;
-      multiplier_1 <= 26'd0;
-      multiplier_2 <= 26'd0;
-      multiplier_3 <= 26'd0;
-      multiplier_4 <= 26'd0;
-      multiplier_5 <= 26'd0;
+      multiplier_0 <= 6'd0;
+      multiplier_1 <= 6'd0;
+      multiplier_2 <= 6'd0;
+      multiplier_3 <= 6'd0;
+      multiplier_4 <= 6'd0;
+      multiplier_5 <= 6'd0;
     end
     else if(current_state == out) begin
       case (state_cnt) 
         3'd0 : begin
-          multiplier_0 <= data_mul;
+          //multiplier_0 <= data_mul;
+          multiplier_0 <= {int_or_fra_buf, i_buf};
         end
         
         3'd1 : begin
-          multiplier_1 <= data_mul;
+          //multiplier_1 <= data_mul;
+          multiplier_1 <= {int_or_fra_buf, i_buf};
         end
 
         3'd2 : begin
-          multiplier_2 <= data_mul;
+          //multiplier_2 <= data_mul;
+          multiplier_2 <= {int_or_fra_buf, i_buf};
         end
 
         3'd3 : begin
-          multiplier_3 <= data_mul;
+          //multiplier_3 <= data_mul;
+          multiplier_3 <= {int_or_fra_buf, i_buf};
         end
 
         3'd4 : begin
-          multiplier_4 <= data_mul;
+          //multiplier_4 <= data_mul;
+          multiplier_4 <= {int_or_fra_buf, i_buf};
         end
 
         3'd5 : begin
-          multiplier_5 <= data_mul;
+          //multiplier_5 <= data_mul;
+          multiplier_5 <= {int_or_fra_buf, i_buf};
         end
 
         default : begin
-          multiplier_0 <= 26'd0;
-          multiplier_1 <= 26'd0;
-          multiplier_2 <= 26'd0;
-          multiplier_3 <= 26'd0;
-          multiplier_4 <= 26'd0;
-          multiplier_5 <= 26'd0;
+          multiplier_0 <= 6'd0;
+          multiplier_1 <= 6'd0;
+          multiplier_2 <= 6'd0;
+          multiplier_3 <= 6'd0;
+          multiplier_4 <= 6'd0;
+          multiplier_5 <= 6'd0;
         end
       endcase
     end
@@ -193,14 +201,16 @@ selection       U_SELECTION_0(
 );
 
 
-mul_gen         U_MUL_GEN_0(
-    .clk        ( clk            ),
-    .rst_n      ( rst_n          ),
-    .i          ( i              ),
-    .data       ( sel_input_data ),
-    .int_or_fra ( int_or_fra     ),
-    .data_mul   ( data_mul       ),
-    .data_sub   ( data_sub       )
+mul_gen             U_MUL_GEN_0(
+    .clk            ( clk            ),
+    .rst_n          ( rst_n          ),
+    .i              ( i              ),
+    .data           ( sel_input_data ),
+    .int_or_fra     ( int_or_fra     ),
+    .data_mul       ( data_mul       ),
+    .data_sub       ( data_sub       ),
+    .int_or_fra_buf ( int_or_fra_buf ),
+    .i_buf          ( i_buf          )
 );
 
 endmodule

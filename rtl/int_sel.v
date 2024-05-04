@@ -1,3 +1,5 @@
+
+`timescale 1ns/1ps
 module int_sel(
   input  wire [14:0] data,
 
